@@ -1,0 +1,12 @@
+extends ./layout.jade
+
+block content
+  .tab-panels.tab-views(role='tabpanel')
+    ul.tab-panels--tab-list.tab-views--tab-list(role='tablist')
+      li.tab-panels--tab-list-item.tab-views--tab-list-item.base--li(role='presentation')
+        a.tab-panels--tab.tab-views--tab(href='/', aria-controls='panel1', role='tab') Watson
+      li.tab-panels--tab-list-item.tab-views--tab-list-item.base--li(role='presentation')
+        a.tab-panels--tab.tab-views--tab.active(href='/train', aria-controls='panel2', role='tab') Train
+    .tab-panels--tab-content
+      include ./includes/train.jade
+      include ./includes/test.jade

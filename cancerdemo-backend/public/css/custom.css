@@ -1,0 +1,31 @@
+#items{
+    width:100%;
+}
+#items .sub-item{
+    border-top:1px solid #666;
+    overflow:auto;
+    width:100%;
+}
+    #items .sub-item .status{
+        font-size:14px;
+        color:#999;
+        margin: 0;
+    }
+
+.options{
+    margin:0;
+    padding:0;
+}
+
+    .options li{
+        border:solid 1px #000;
+        padding:6px 12px;
+        float:right;
+        transition: background-color 0.5s ease;
+        transition: color 0.5s ease;
+        cursor:pointer;
+    }
+        .options li:hover{
+            background:#000;
+            color:#fff;
+        }

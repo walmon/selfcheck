@@ -1,0 +1,70 @@
+{
+  "name": "visualrecognitioncustomclass",
+  "version": "3.0.0",
+  "description": "A Visual Recognition custom classifier",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/walmon/c-visual-recognition-nodejs.git"
+  },
+  "author": "IBM Corp.",
+  "contributors": [
+    {
+      "name": "Walter Montes Delgado",
+      "email": "wmontes@cognitiva.la"
+    }
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/walmon/c-visual-recognition-nodejs/issues"
+  },
+  "scripts": {
+    "start": "gulp start"
+  },
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.1",
+    "@angular/compiler": "2.0.0-rc.1",
+    "@angular/core": "2.0.0-rc.1",
+    "@angular/http": "2.0.0-rc.1",
+    "@angular/platform-browser": "2.0.0-rc.1",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.1",
+    "@angular/router": "2.0.0-rc.1",
+    "es6-shim": "^0.35.0",
+    "async": "^2.0.0-rc.5",
+    "body-parser": "^1.15.1",
+    "cf-deployment-tracker-client": "0.1.1",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.1",
+    "csurf": "^1.8.3",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "express-browserify": "^1.0.2",
+    "express-rate-limit": "^2.3.1",
+    "extend": "^3.0.0",
+    "helmet": "^2.1.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.7.0",
+    "multer": "^1.1.0",
+    "request": "^2.72.0",
+    "uuid": "^2.0.2",
+    "validator": "^5.2.0",
+    "watson-developer-cloud": "^1.9.0"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-watch": "4.3.5",
+    "babel-eslint": "^6.0.4",
+    "casperjs": "^1.1.1",
+    "codecov": "^1.0.1",
+    "combinations": "^0.1.0",
+    "eslint": "^2.8.0",
+    "eslint-config-airbnb-es5": "^1.0.9",
+    "eslint-plugin-react": "^5.1.1",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.4.5",
+    "phantomjs": "^2.1.7",
+    "precommit-hook": "^3.0.0",
+    "supertest": "^1.2.0"
+  },
+  "pre-commit": [
+  ]
+}

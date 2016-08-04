@@ -1,0 +1,83 @@
+div._demo--container
+  ._container--training
+    h1.base--h2.use--header Entrenar clasificador personalizado
+    
+    ._training--example.clickable(data-kind='user')
+      h3 Personalizado
+      ._training--use-your-own.square
+        ._training--use-your-own-plus +
+
+._examples(data-kind="user")
+  .user-submitted
+    form#user_upload.upload.training_dropzone
+      div
+          input.base--input._examples--input-name(name="classifiername",type='text', placeholder='Nombre de clasificador',required)
+      div._demo--container
+        
+        .positive
+          h2 Clases positivas
+          p.text Archivo Zip, mínimo 50 imágenes, máximo 250
+          .classifiers
+            .classifier(data-hasfile=0,data-idx=0)
+              .text
+                span.text-label
+                  a.base--a(href="javascript:void(0)") Seleccione
+                  |  o arrastre el .zip
+                img.text-zip-image(src="images/VR zip icon.svg")
+              input(type="file",name="classupload",accept="application/zip")
+              input.base--input(type="text",name="classname",placeholder="Name of This Class")
+              a(href="").base--a.clear_link Limpiar
+            .classifier(data-hasfile=0,data-idx=1)
+              .text
+                span.text-label
+                  a.base--a(href="javascript:void(0)") Seleccione
+                  |  o arrastre el .zip
+                img.text-zip-image(src="images/VR zip icon.svg")
+              input(type="file",name="classupload",accept="application/zip")
+              input.base--input(type="text",name="classname",placeholder="Name of This Class")
+              a(href="").base--a.clear_link Limpiar
+            .classifier(data-hasfile=0,data-idx=2)
+              .text
+                span.text-label
+                  a.base--a(href="javascript:void(0)") Seleccione
+                  |  o arrastre el .zip
+                img.text-zip-image(src="images/VR zip icon.svg")
+              input(type="file",name="classupload",accept="application/zip")
+              input.base--input(type="text",name="classname",placeholder="Name of This Class")
+              a(href="").base--a.clear_link Limpiar
+          .upload_message Cargue al menos dos grupos de imágenes.
+        .seperator
+        .negative
+          h2.negative-header Negativos
+          .classifiers
+            .classifier(data-hasfile=0,data-idx=3).negative
+              .text
+                span.text-label
+                  a.base--a(href="javascript:void(0)") Seleccione
+                  |  o arrastre el .zip
+                img.text-zip-image(src="images/VR zip icon.svg")
+              input(name="classname",value="negative")
+              input(type="file",name="negativeclassupload",accept="application/zip")
+              a(href="").base--a.clear_link Clear
+              p Imágenes que pueden parecer positivas, pero no lo son.
+
+
+  .train--row
+    .train--column-1
+      button.train--train-button.base--button(disabled='true') Entrenar clasificador
+      
+    .train--column-2
+      .icon-hyperlink.train--reset
+        span.icon.icon-reset
+        button.base--a.icon-hyperlink--button.icon-hyperlink--button_BLANK(type='reset')
+          | Reset
+  
+  .loading.train--loading
+    .loader-container
+      svg.loader(viewBox='25 25 50 50')
+        circle.loader__path(cx='50', cy='50', r='20')
+    p.base--p.loading--message Watson is training your new classifier. 
+    p.base--p.loading--message This might take up to 4-5 minutes based on number of images.
+  .error.train--error
+    img.train--error-image.error--image(src='images/icons/alert.svg')
+    p.base--p.train--error-message.error--message Visual Recognition is not available right now...
