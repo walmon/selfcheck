@@ -1,0 +1,30 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Resultados
+  </ion-title>
+</ion-navbar>
+
+<ion-content>
+  <div class="preview-wrapper">
+    <img class="preview" height="300" [src]="base64Image" *ngIf="base64Image" />
+  </div>
+  
+  <button class="button full-btn main" (click)="send(actualPicture)">
+    Probar
+  </button>
+  <div class="padding" [hidden]="result == 0">
+    <div class="centered transparent" [hidden]="result != 1" >
+      Con <strong>{{score}}%</strong> de confianza hemos detectado que <br/><strong>es un melanoma.</strong>
+      <br/>
+      Lo mejor sería consultar con un especialista siempre que tengas sospechas.
+    </div>
+    <div class="centered transparent" [hidden]="result != 2">
+      Según nuestro sistema inteligente,  <br/><strong>parece no ser un melanoma.</strong>
+      <br/>
+      Si igual sospechas, te recomendamos consultar con un especialista.
+    </div>
+    <button class="button full-btn main" (click)="back()">
+    Tomar otra foto
+  </button>
+  </div>
+</ion-content>
